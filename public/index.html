@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Express</title>
+	</head>
+	<style>
+		body {
+			padding: 0.8em;
+			margin: 0.5em;
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 800px;
+			border: 1px solid salmon;
+			padding: 2rem;
+		}
+		input,
+		button {
+			margin: 0.85em;
+			width: 150px;
+		}
+	</style>
+	<body>
+		<h1>Hello Express</h1>
+		<div>
+			<form action="/newStudent" method="post">
+				<label for="firstName">First Name</label>
+				<input
+					type="text"
+					name="firstName"
+					id="firstName"
+					placeholder="First Name"
+				/>
+				<label for="lastName">Last Name</label>
+				<input
+					type="text"
+					name="lastName"
+					id="lastName"
+					placeholder="Last Name"
+				/>
+				<button type="submit">Submit!</button>
+			</form>
+		</div>
+	</body>
+</html>

@@ -13,7 +13,12 @@ app.get("/students?/:name", (req, res) => {
 	res.send(`The student name is: ${studentName}\n`);
 });
 
-app.post("/newStudent");
+app.post("/newStudent", (req, res) => {
+	const name = req.body.name;
+	const age = req.body.age;
+	const msg = `Name: ${name}, Age: ${age}`;
+	res.send(msg);
+});
 
 app.listen(port, () => {
 	console.log(`Listening on port: ${port}`);

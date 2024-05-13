@@ -17,7 +17,10 @@ app.post("/newStudent", (req, res) => {
 	const firstName = req.body.firstName;
 	const lastName = req.body.lastName;
 	const age = req.body.age;
-	const msg = `First Name: ${firstName},\nLast Name: ${lastName},\n Age: ${age}`;
+	const msg = `
+	First Name: ${firstName},
+	Last Name: ${lastName},
+	Age: ${age}`;
 	res.send(msg);
 });
 

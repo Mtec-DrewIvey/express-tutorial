@@ -8,6 +8,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.get("/students?/:id", (req, res) => {
+	res.send(`${process.env.STATUS}`);
+});
+
 app.get("/students?/:name", (req, res) => {
 	let studentName = req.params.name;
 	res.send(`The student name is: ${studentName}\n`);
